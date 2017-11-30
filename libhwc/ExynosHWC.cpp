@@ -13,6 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+#include <bfqio/bfqio.h>
+
 #if defined(USES_CEC)
 #include "libcec.h"
 #endif
@@ -496,6 +499,7 @@ void *hwc_vsync_thread(void *data)
     if (sched_setscheduler(gettid(), SCHED_FIFO, &sched_param) != 0) {
         ALOGE("Couldn't set SCHED_FIFO for hwc_vsync");
     }
+    android_set_rt_ioprio(0, 1);
 
     uevent_init();
 

@@ -22,7 +22,7 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/hw
 LOCAL_SHARED_LIBRARIES := liblog libcutils libEGL libGLESv1_CM libhardware \
 	libhardware_legacy libion_exynos libutils libsync \
 	libexynosv4l2 libMcClient libexynosutils libhwcutils libexynosdisplay libhdmi \
-	libdisplaymodule libhdmimodule libmpp
+	libdisplaymodule libhdmimodule libmpp libbfqio
 
 ifeq ($(BOARD_DYNAMIC_RECOMPOSITION_DISABLED), true)
 	LOCAL_CFLAGS += -DDYNAMIC_RECOMPOSITION_DISABLED
