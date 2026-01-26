@@ -25,6 +25,14 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi-cm/exynos4/include \
 	$(TOP)/hardware/samsung_slsi-cm/exynos5/include
 
+ifeq ($(filter 3.10, $(TARGET_LINUX_KERNEL_VERSION)), 3.10)
+LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.10-headers
+else
+ifeq ($(filter 3.4, $(TARGET_LINUX_KERNEL_VERSION)), 3.4)
+LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.4-headers
+endif
+endif
+
 LOCAL_SRC_FILES := MppFactory.cpp
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libmpp
