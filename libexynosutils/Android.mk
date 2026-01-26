@@ -29,6 +29,8 @@ LOCAL_SRC_FILES := ExynosMutex.cpp \
 
 LOCAL_MODULE := libexynosutils
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SRC_FILES += exynos_format_v4l2.c
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../include

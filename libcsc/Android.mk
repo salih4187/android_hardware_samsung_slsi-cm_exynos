@@ -40,6 +40,8 @@ LOCAL_SHARED_LIBRARIES += libexynosscaler
 endif
 endif
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_CFLAGS += -DUSE_ION
 LOCAL_SHARED_LIBRARIES += libion_exynos
 

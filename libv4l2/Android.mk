@@ -25,6 +25,8 @@ LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/../include \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libexynosutils
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libutils \

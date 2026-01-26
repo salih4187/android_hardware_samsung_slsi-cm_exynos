@@ -33,6 +33,8 @@ LOCAL_SHARED_LIBRARIES:= liblog libutils libbinder
 
 LOCAL_MODULE:= libfimg
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)

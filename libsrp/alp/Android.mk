@@ -9,6 +9,8 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_MODULE := libsrpapi
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_ARM_MODE := arm

@@ -7,6 +7,8 @@ LOCAL_SRC_FILES := \
 	dec/ExynosVideoDecoder.c \
 	enc/ExynosVideoEncoder.c
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/include \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/include \

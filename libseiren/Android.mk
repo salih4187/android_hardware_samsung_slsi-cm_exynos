@@ -11,6 +11,8 @@ LOCAL_SRC_FILES :=  dec/seiren_hw.c
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_MODULE := libseirenhw
 
 LOCAL_MODULE_TAGS := optional

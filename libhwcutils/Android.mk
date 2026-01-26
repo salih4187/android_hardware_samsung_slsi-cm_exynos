@@ -77,6 +77,8 @@ LOCAL_SRC_FILES += \
 	ExynosHWCUtils.cpp \
 	ExynosMPP.cpp
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 ifeq ($(BOARD_USES_VIRTUAL_DISPLAY), true)
 	LOCAL_CFLAGS += -DUSES_VIRTUAL_DISPLAY
 	LOCAL_C_INCLUDES += \

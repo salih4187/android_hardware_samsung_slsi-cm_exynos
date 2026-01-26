@@ -25,6 +25,8 @@ LOCAL_C_INCLUDES:= \
       frameworks/native/include/media/openmax \
       frameworks/native/include
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SHARED_LIBRARIES :=    \
         libbinder            \
         libutils             \

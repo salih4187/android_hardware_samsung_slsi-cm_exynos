@@ -25,6 +25,8 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi-cm/exynos4/include \
 	$(TOP)/hardware/samsung_slsi-cm/exynos5/include
 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+
 LOCAL_SRC_FILES := MppFactory.cpp
 LOCAL_MODULE := libmpp
 
