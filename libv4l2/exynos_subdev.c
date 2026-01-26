@@ -29,6 +29,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/ioctl.h>
@@ -67,12 +68,12 @@ int exynos_subdev_open(const char *filename, int oflag, ...)
     return fd;
 }
 
-int exynos_subdev_get_node_num(const char *devname, int oflag, ...)
+int exynos_subdev_get_node_num(const char *devname, int __unused oflag, ...)
 {
     bool found = false;
     int ret = -1;
     struct stat s;
-    va_list ap;
+    va_list __unused ap;
     FILE *stream_fd;
     char filename[64], name[64];
     int size, i = 0;

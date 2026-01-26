@@ -210,7 +210,7 @@ bool FimgV4x::t_UnLock(void)
 
 bool FimgV4x::m_CreateG2D(void)
 {
-    void * mmap_base;
+    void * mmap_base __unused;
 
     if (m_g2dFd != 0) {
         PRINT("%s::m_g2dFd(%d) is not 0 fail\n", __func__, m_g2dFd);
@@ -283,7 +283,7 @@ inline bool FimgV4x::m_PollG2D(struct pollfd * events)
 //---------------------------------------------------------------------------//
 // extern function
 //---------------------------------------------------------------------------//
-extern "C" struct FimgApi * createFimgApi()
+extern "C" FimgApi * createFimgApi()
 {
     if (fimgApiAutoFreeThread == 0)
         fimgApiAutoFreeThread = new FimgApiAutoFreeThread();
@@ -293,16 +293,9 @@ extern "C" struct FimgApi * createFimgApi()
     return FimgV4x::CreateInstance();
 }
 
-extern "C" void destroyFimgApi(FimgApi * ptrFimgApi)
+extern "C" void destroyFimgApi(FimgApi * ptrFimgApi __unused)
 {
     // Dont' call DestroyInstance.
-}
-
-extern "C" bool compromiseFimgApi(struct compromise_param * param)
-{
-    if ((param->clipW * param->clipH) < comp_value[param->src_fmt][param->dst_fmt][param->isScaling][param->isFilter][param->isSrcOver])
-        return false;
-    return true;
 }
 
 }; // namespace android

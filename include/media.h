@@ -112,8 +112,8 @@ struct media_link_desc {
 struct media_links_enum {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  __u32 entity;
- struct media_pad_desc __user *pads;
- struct media_link_desc __user *links;
+ struct media_pad_desc *pads;
+ struct media_link_desc *links;
  __u32 reserved[4];
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
