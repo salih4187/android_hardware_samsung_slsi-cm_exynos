@@ -50,6 +50,5 @@ LOCAL_C_INCLUDES := \
 LOCAL_SRC_FILES := \
 	ExynosVirtualDisplay.cpp
 
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libvirtualdisplay
 include $(BUILD_SHARED_LIBRARY)

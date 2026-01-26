@@ -34,7 +34,6 @@ endif
 endif
 
 LOCAL_SRC_FILES := MppFactory.cpp
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libmpp
 
 ifeq ($(TARGET_BOARD_PLATFORM),exynos5)

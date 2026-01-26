@@ -75,7 +75,6 @@ LOCAL_SRC_FILES := \
 	ExynosDisplay.cpp \
 	ExynosOverlayDisplay.cpp
 
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libdisplay
 include $(BUILD_SHARED_LIBRARY)
 
