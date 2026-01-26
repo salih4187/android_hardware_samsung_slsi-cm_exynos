@@ -20,14 +20,6 @@ LOCAL_SRC_FILES := \
 
 LOCAL_CFLAGS += $(PV_CFLAGS_MINUS_VISIBILITY)
 
-ifeq ($(filter 3.10, $(TARGET_LINUX_KERNEL_VERSION)), 3.10)
-LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.10-headers
-else
-ifeq ($(filter 3.4, $(TARGET_LINUX_KERNEL_VERSION)), 3.4)
-LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.4-headers
-endif
-endif
-
 LOCAL_C_INCLUDES:= \
       frameworks/native/include/media/hardware \
       frameworks/native/include/media/openmax \

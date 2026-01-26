@@ -33,14 +33,6 @@ LOCAL_SRC_FILES += exynos_format_v4l2.c
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../include
 
-ifeq ($(filter 3.10, $(TARGET_LINUX_KERNEL_VERSION)), 3.10)
-LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.10-headers
-else
-ifeq ($(filter 3.4, $(TARGET_LINUX_KERNEL_VERSION)), 3.4)
-LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/kernel-3.4-headers
-endif
-endif
-
 ifeq ($(BOARD_USES_FIMC),true)
 LOCAL_CFLAGS += -DENABLE_FIMC
 endif
