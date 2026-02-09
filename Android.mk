@@ -18,6 +18,7 @@ ifeq ($(TARGET_SLSI_VARIANT),cm)
 
 common_exynos_dirs := \
 	libstagefrighthw \
+	libmemtrack \
 	libcsc \
 	libv4l2 \
 	libexynosutils \
