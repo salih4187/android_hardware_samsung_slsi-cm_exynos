@@ -31,6 +31,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <fcntl.h>
+#include <errno.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -178,8 +179,6 @@ static void __Set_SupportFormat(ExynosVideoInstInfo *pVideoInstInfo)
     default:
         break;
     }
-
-EXIT:
     return ;
 }
 
@@ -1226,7 +1225,7 @@ EXIT:
 /*
  * [Encoder Buffer OPS] Get Buffer (Input)
  */
-static ExynosVideoErrorType MFC_Encoder_Get_Buffer_Inbuf(
+static ExynosVideoErrorType __unused MFC_Encoder_Get_Buffer_Inbuf(
     void               *pHandle,
     int                 nIndex,
     ExynosVideoBuffer **pBuffer)
@@ -1818,7 +1817,7 @@ EXIT:
 /*
  * [Encoder Buffer OPS] Wait (Src)
  */
-static ExynosVideoErrorType MFC_Encoder_Wait_Inbuf(void *pHandle)
+static ExynosVideoErrorType __unused MFC_Encoder_Wait_Inbuf(void *pHandle)
 {
     ExynosVideoEncContext *pCtx = (ExynosVideoEncContext *)pHandle;
     ExynosVideoErrorType   ret  = VIDEO_ERROR_NONE;
@@ -1860,7 +1859,7 @@ EXIT:
 /*
  * [Encoder Buffer OPS] Wait (Dst)
  */
-static ExynosVideoErrorType MFC_Encoder_Wait_Outbuf(void *pHandle)
+static ExynosVideoErrorType __unused MFC_Encoder_Wait_Outbuf(void *pHandle)
 {
     ExynosVideoEncContext *pCtx = (ExynosVideoEncContext *)pHandle;
     ExynosVideoErrorType   ret  = VIDEO_ERROR_NONE;
@@ -2260,7 +2259,7 @@ EXIT:
 /*
  * [Encoder Buffer OPS] Enqueue All (Output)
  */
-static ExynosVideoErrorType MFC_Encoder_Enqueue_All_Outbuf(void *pHandle)
+static ExynosVideoErrorType __unused MFC_Encoder_Enqueue_All_Outbuf(void *pHandle)
 {
     ExynosVideoEncContext *pCtx = (ExynosVideoEncContext *)pHandle;
     ExynosVideoErrorType   ret  = VIDEO_ERROR_NONE;
@@ -2352,7 +2351,7 @@ static ExynosVideoBuffer *MFC_Encoder_Dequeue_Outbuf(void *pHandle)
 
     struct v4l2_buffer buf;
     struct v4l2_plane  planes[VIDEO_BUFFER_MAX_PLANES];
-    int value, plane;
+    int value __unused, plane;
     int ret = 0;
 
     if (pCtx == NULL) {
@@ -2758,7 +2757,7 @@ static ExynosVideoErrorType MFC_Encoder_ExtensionDequeue_Outbuf(
     pthread_mutex_t       *pMutex = NULL;
     struct v4l2_buffer buf;
     struct v4l2_plane  planes[VIDEO_BUFFER_MAX_PLANES];
-    int value, plane;
+    int value __unused, plane;
 
     if (pCtx == NULL) {
         ALOGE("%s: Video context info must be supplied", __func__);

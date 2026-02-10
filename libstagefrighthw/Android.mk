@@ -33,6 +33,7 @@ LOCAL_SHARED_LIBRARIES :=    \
         libcutils            \
         libui                \
         libdl                \
+        liblog               \
         libstagefright_foundation
 
 LOCAL_MODULE := libstagefrighthw
